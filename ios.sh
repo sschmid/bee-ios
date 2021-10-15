@@ -44,6 +44,7 @@ ios::export() {
 ios::upload() {
   xcrun altool --upload-app \
     -f "${IOS_IPA}" \
+    -t ios \
     -u "${IOS_USER}" \
     -p "${IOS_PASSWORD}"
 }
