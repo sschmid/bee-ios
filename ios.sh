@@ -9,9 +9,9 @@ IOS_ARCHIVE="Build/iOS/${BEE_PROJECT}/${BEE_PROJECT}.xcarchive"
 IOS_EXPORT_PATH="Build/iOS/${BEE_PROJECT}/Export"
 IOS_IPA="${IOS_EXPORT_PATH}/Unity-iPhone.ipa"
 IOS_EXPORT_OPTIONS="${BEE_RESOURCES}"/ios/ExportOptions.plist
-# Potentially sensitive data. Do not commit.
-IOS_USER="user"
-IOS_PASSWORD="password"'
+# secrets:
+# ios.user
+# ios.password'
 }
 
 ios::archive_project() {
@@ -42,9 +42,12 @@ ios::export() {
 }
 
 ios::upload() {
+  local user password
+  user="$(bee::secrets ios.user)"
+  password="$(bee::secrets ios.password)"
   xcrun altool --upload-app \
     -f "${IOS_IPA}" \
     -t ios \
-    -u "${IOS_USER}" \
-    -p "${IOS_PASSWORD}"
+    -u "${user}" \
+    -p "${password}"
 }
