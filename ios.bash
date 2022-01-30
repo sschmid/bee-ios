@@ -10,8 +10,6 @@
 
 ios::help() {
   cat << 'EOF'
-Useful commands for iOS development - https://github.com/sschmid/bee-ios
-
 This plugin comes with additional resources.
 Please run 'bee res ios' to copy all required files to your project.
 
@@ -38,11 +36,7 @@ usage:
   export              export Xcode archive
   upload              upload IPA to TestFlight
 
-bee dependencies:
-
-  none
-
-dependencies:
+requirements:
 
   Xcode   https://developer.apple.com/xcode
 

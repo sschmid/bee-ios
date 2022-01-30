@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2022-01-30
+### Changed
+- Update plugin according to bee 1.0.0 specs
+
 ## [1.1.0] - 2021-10-15
 ### Added
 - Update to Xcode 13 (Add `-t ios` to `xcrun altool --upload-app`)
@@ -17,6 +21,7 @@ like the official beehub: https://github.com/sschmid/beehub
 This is the initial version that contains all changes up to bee-0.39.0.
 The code has been refactored and updated to follow the bee conventions.
 
-[Unreleased]: https://github.com/sschmid/bee-ios/compare/1.1.0...HEAD
+[Unreleased]: https://github.com/sschmid/bee-ios/compare/2.0.0...HEAD
+[2.0.0]: https://github.com/sschmid/bee-ios/compare/1.1.0...2.0.0
 [1.1.0]: https://github.com/sschmid/bee-ios/compare/1.0.0...1.1.0
 [1.0.0]: https://github.com/sschmid/bee-ios/releases/tag/1.0.0
